@@ -1,0 +1,10 @@
+{
+	"name" : "org.peterpi.debugtools",
+	"version" : "0.0.1",
+	"displayName" : "Peter's Debug Tools",
+	"description" : "Some debug scripts that I often use.",
+	"unity" : "2018.4",
+	"dependencies" : {
+		"com.unity.ugui" : "1.0.0"
+	}
+}
