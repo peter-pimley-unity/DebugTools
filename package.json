@@ -1,6 +1,6 @@
 {
 	"name" : "org.peterpi.debugtools",
-	"version" : "0.0.2",
+	"version" : "0.0.3",
 	"displayName" : "Peter's Debug Tools",
 	"description" : "Some debug scripts that I often use.",
 	"unity" : "2018.4",
