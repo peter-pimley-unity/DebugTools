@@ -6,5 +6,10 @@
 	"unity" : "2018.4",
 	"dependencies" : {
 		"com.unity.ugui" : "1.0.0"
+	},
+	"author" : {
+		"name" : "Peter Pimley",
+		"email" : "peter.pimley@unity3d.com",
+		"url" : "https://github.com/peter-pimley-unity"
 	}
 }
