@@ -26,8 +26,7 @@ namespace org.peterpi.debugtools
 			m_t = GetComponent<Text>();
 			Debug.Assert(m_t != null);
 			Application.logMessageReceived += Log;
-
-			Debug.Log("test");
+			Debug.Log("AppLogOnText initialized.");
 		}
 
 		private void OnDestroy()
@@ -37,15 +36,20 @@ namespace org.peterpi.debugtools
 
 		private void Log (string mesg, string stack, LogType lt)
 		{
-			m_lines.Add(mesg);
+			using (var r = new System.IO.StringReader (mesg))
+			{
+				string s = r.ReadLine();
+				m_lines.Add(s);
+			}
+
 			int overflow = m_lines.Count - m_capacity;
 			if (overflow > 0)
 			{
 				m_lines.RemoveRange(0, overflow);
 			}
 
-			string s = string.Join("\n", m_lines);
-			m_t.text = s;
+			string all = string.Join("\n", m_lines);
+			m_t.text = all;
 		}
 	}
 
